@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from "styled-components";
 import { PhoneCarts } from "../components/PhoneCarts";
 
 export const DUMMY_PRODUCTS = [
@@ -27,22 +28,16 @@ export const DUMMY_PRODUCTS = [
 
 export const Products = () => {
   return (
-    <>
+    <StyledContainer>
       {DUMMY_PRODUCTS.map((phone) => {
         return (
           <PhoneCarts phone={phone}/>
         )
       })}
-    </>
+    </StyledContainer>
   );
 };
-// const StyledDiv = styled('div')`
-//   width: 300px;
-//   height: 500px;
-//   background-color: white;
-//   display: flex;
-// `
-// const StyledImages = styled('img')`
-//   width: 200px;
-//   height: 250px;
-// `
+const StyledContainer = styled('div')`
+  display: flex;
+  justify-content: space-around;
+`
