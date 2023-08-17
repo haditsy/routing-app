@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/routing-app/static/css/main.2e419f24.css",
+    "main.js": "/routing-app/static/js/main.6583df1f.js",
+    "index.html": "/routing-app/index.html",
+    "main.2e419f24.css.map": "/routing-app/static/css/main.2e419f24.css.map",
+    "main.6583df1f.js.map": "/routing-app/static/js/main.6583df1f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e419f24.css",
+    "static/js/main.6583df1f.js"
+  ]
+}
