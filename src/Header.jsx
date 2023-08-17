@@ -5,6 +5,7 @@ import { Cart } from "./pages/Cart";
 import { Orders } from "./pages/Orders";
 import { Products } from "./pages/Products";
 import { Main } from "./pages/Main";
+import { ProductDetail } from "./pages/ProductDetail";
 
 export const Header = () => {
   return (
@@ -12,9 +13,8 @@ export const Header = () => {
       <StyledHeader>
         <h1>iStore</h1>
         <nav style={{ display: "flex", gap: "1rem" }}>
-            <NavLink to="/">
-            </NavLink>
-          <NavLink
+          <Link to="/"></Link>
+          <Link
             style={(props) => {
               if (props.isActive) {
                 return {
@@ -25,8 +25,8 @@ export const Header = () => {
             to="/products"
           >
             Products
-          </NavLink>
-          <NavLink
+          </Link>
+          <Link
             style={(props) => {
               if (props.isActive) {
                 return {
@@ -37,8 +37,8 @@ export const Header = () => {
             to="/cart"
           >
             My Cart
-          </NavLink>
-          <NavLink
+          </Link>
+          <Link
             style={(props) => {
               if (props.isActive) {
                 return {
@@ -49,12 +49,13 @@ export const Header = () => {
             to="/orders"
           >
             Orders
-          </NavLink>
+          </Link>
         </nav>
       </StyledHeader>
       <Routes>
-        <Route path="/" element={<Main />}/>
+        <Route path="/" element={<Main />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/orders" element={<Orders />} />
       </Routes>
@@ -73,8 +74,9 @@ const StyledHeader = styled("header")`
   & > h1 {
     color: white;
   }
-  & > ul {
+  /* & > ul {
     list-style: none;
+    text-decoration: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -83,5 +85,11 @@ const StyledHeader = styled("header")`
   & > ul > li {
     font-size: 20px;
     margin-left: 40px;
-  }
+  } */
+`;
+
+const Link = styled(NavLink)`
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 `;

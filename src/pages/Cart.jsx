@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import Button from "../components/UI/Button";
 
 export const Cart = () => {
   return (
@@ -9,6 +10,7 @@ export const Cart = () => {
         <StyledCart>
           <h3>My Cart page</h3>
         </StyledCart>
+        <Button />
       </div>
     </>
   );
