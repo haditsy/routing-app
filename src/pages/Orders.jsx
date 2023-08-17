@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import Button from "../components/UI/Button";
 
 export const Orders = () => {
   return (
@@ -7,6 +8,7 @@ export const Orders = () => {
       <StyledOrders>
         <h3>My Orders page</h3>
       </StyledOrders>
+      <Button />
     </>
   );
 };

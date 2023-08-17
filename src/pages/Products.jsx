@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { PhoneCarts } from "../components/PhoneCarts";
+import Button from "../components/UI/Button";
 
 export const DUMMY_PRODUCTS = [
   {
@@ -28,16 +29,17 @@ export const DUMMY_PRODUCTS = [
 
 export const Products = () => {
   return (
-    <StyledContainer>
-      {DUMMY_PRODUCTS.map((phone) => {
-        return (
-          <PhoneCarts phone={phone}/>
-        )
-      })}
-    </StyledContainer>
+    <>
+      <StyledContainer>
+        {DUMMY_PRODUCTS.map((phone) => {
+          return <PhoneCarts key={phone.id} phone={phone} />;
+        })}
+      </StyledContainer>
+      <Button />
+    </>
   );
 };
-const StyledContainer = styled('div')`
+const StyledContainer = styled("div")`
   display: flex;
   justify-content: space-around;
-`
+`;
